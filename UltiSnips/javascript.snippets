@@ -27,7 +27,7 @@ endsnippet
 
 snippet be
 beforeEach(function () {
-	this.param = 'string';
+	test.result = 1;
 });
 endsnippet
 
@@ -50,11 +50,11 @@ endsnippet
 snippet de
 describe('with ${1:conditions}', function () {
 	beforeEach(function () {
-		this.param = 'string';
+		test.result = 1;
 	});
 
 	it('should ${2:expect}', function () {
-		${0:expect(1).toBe(1);}
+		${0:expect(test.result).toBe(1);}
 	});
 });
 endsnippet
