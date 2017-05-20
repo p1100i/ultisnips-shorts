@@ -1,5 +1,9 @@
 priority -50
 
+snippet . "Expand objects" i
+.${1:variable} = $1;
+endsnippet
+
 snippet /**
 /**
  * ${1:description} ${0}
@@ -41,6 +45,10 @@ endsnippet
 
 snippet cl
 console.log('${0:log}');
+endsnippet
+
+snippet ct
+ctrl.${1:variable} = $1;
 endsnippet
 
 snippet db
@@ -192,8 +200,4 @@ snippet vf
 ${1:functionName} = function $1() {
 	return;
 },
-endsnippet
-
-snippet . "Expand objects" i
-.${1:variable} = $1;
 endsnippet
