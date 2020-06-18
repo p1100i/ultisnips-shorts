@@ -125,6 +125,10 @@ snippet js
 JSON.stringify(${0:object});
 endsnippet
 
+snippet me
+module.exports = ${0:exportedName}
+endsnippet
+
 snippet okf
 '${1:functionName}' : function $1() {},
 endsnippet
@@ -163,6 +167,18 @@ snippet ro
 return {
 	'${1:prop}' : $1
 };
+endsnippet
+
+snippet sl
+var sleep = function sleep(ms) {
+	console.log('Sleeping for', ms, 'ms');
+
+	return new Promise(function (resolve) {
+		setTimeout(resolve, ms);
+	});
+};
+
+await sleep(2000);
 endsnippet
 
 snippet sw
