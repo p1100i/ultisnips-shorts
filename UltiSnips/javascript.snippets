@@ -140,10 +140,6 @@ snippet okf
 endsnippet
 
 snippet oks
-'${1:spyFunction}' : spyOn(${2:spyObject}, '$1').and.callThrough(),
-endsnippet
-
-snippet oos
 '${1:spyObject}' : jasmine.createSpyObj('$1', ['${2:spyFnName}']),
 endsnippet
 
@@ -214,6 +210,12 @@ try {
 }
 endsnippet
 
+snippet va
+${1:functionName} = async function $1() {
+	return;
+},
+endsnippet
+
 snippet vo
 ${1:objectName} = {
 	'${2:key}' : $2,
@@ -226,8 +228,6 @@ ${1:functionName} = function $1() {
 },
 endsnippet
 
-snippet va
-${1:functionName} = async function $1() {
-	return;
-},
+snippet vs
+${1:spyObject} = jasmine.createSpyObj('$1', ['${2:spyFnName}']),
 endsnippet
