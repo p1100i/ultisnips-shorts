@@ -21,6 +21,12 @@ snippet @re
 @return {${1:type}} ${2:description}
 endsnippet
 
+snippet acf
+.and.callFake(function (${1:param}) {
+	return ${1};
+});
+endsnippet
+
 snippet ao
 [
 	{
@@ -137,14 +143,14 @@ snippet oks
 '${1:spyFunction}' : spyOn(${2:spyObject}, '$1').and.callThrough(),
 endsnippet
 
-snippet okv
-'${1:key}' : $1,
+snippet oos
+'${1:spyObject}' : jasmine.createSpyObj('$1', [
+	'${2:spyFnName}'
+]),
 endsnippet
 
-snippet oos
-'${1:spyObject}' : {
-	'${2:spyFunction}' : spyOn($1, '$2').and.callThrough(),
-},
+snippet okv
+'${1:key}' : $1,
 endsnippet
 
 snippet on
