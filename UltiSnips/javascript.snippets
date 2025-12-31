@@ -37,12 +37,12 @@ endsnippet
 
 snippet be
 beforeEach(function () {
-	test.result = 1;
 });
 endsnippet
 
-snippet br
-$rootScope.$broadcast(${1:eventName}, ${2:eventData});
+snippet ba
+beforeEach(async function () {
+});
 endsnippet
 
 snippet ce
@@ -53,23 +53,12 @@ snippet cl
 console.log('${1:log}', $1);
 endsnippet
 
-snippet ct
-ctrl.${1:variable} = $1;
-endsnippet
-
 snippet db
 debugger;
 endsnippet
 
 snippet de
 describe('with ${1:conditions}', function () {
-	beforeEach(function () {
-		test.result = 1;
-	});
-
-	it('should ${2:expect}', function () {
-		${0:expect(test.result).toBe(1);}
-	});
 });
 endsnippet
 
@@ -123,6 +112,12 @@ it('should ${1:expect}', function () {
 });
 endsnippet
 
+snippet ia
+it('should ${1:expect}', async function () {
+	${0:expect(1).toBe(1);}
+});
+endsnippet
+
 snippet jp
 JSON.parse(${0:jstr});
 endsnippet
@@ -147,20 +142,12 @@ snippet okv
 '${1:key}' : $1,
 endsnippet
 
-snippet on
-$scope.$on(${1:eventName}, ${2:cb});
-endsnippet
-
-snippet sc
-$scope.${1:variable} = $1;
-endsnippet
-
 snippet sp
 spyOn(${1:object}, '${2:method}').and.callThrough();
 endsnippet
 
 snippet re
-require('${0:name}'),
+${0:name} = require('$0');
 endsnippet
 
 snippet rv
