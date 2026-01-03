@@ -57,7 +57,20 @@ snippet db
 debugger;
 endsnippet
 
-snippet de
+snippet def
+define([
+], function (
+) {
+	var
+		Main = function Main() {
+			return 'main';
+		};
+
+	return Main;
+});
+endsnippet
+
+snippet des
 describe('with ${1:conditions}', function () {
 });
 endsnippet
