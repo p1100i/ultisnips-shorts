@@ -71,7 +71,7 @@ define([
 endsnippet
 
 snippet des
-describe('with ${1:conditions}', function () {
+describe('w/ ${1:conditions}', function () {
 });
 endsnippet
 
@@ -97,6 +97,16 @@ snippet er
 throw new Error('${1:error message}');
 endsnippet
 
+snippet exd
+export default new ${1:Proto}();
+endsnippet
+
+snippet exo
+export {
+	${1:fnName}
+};
+endsnippet
+
 snippet es
 expect(${1:spyFunction}).toHaveBeenCalledWith(${2:arguments});
 endsnippet
@@ -117,6 +127,14 @@ snippet if
 if (${1:true}) {
 	${0}
 }
+endsnippet
+
+snippet ima
+import * as ${1:speci} from '$1';
+endsnippet
+
+snippet imd
+import ${1:speci} from '$1';
 endsnippet
 
 snippet it
