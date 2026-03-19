@@ -75,6 +75,14 @@ describe('w/ ${1:conditions}', function () {
 });
 endsnippet
 
+snippet eas
+await expectAsync(${1:asynFn}()).toBeResolved();
+endsnippet
+
+snippet eat
+await expectAsync(${1:asynFn}()).toBeRejectedWithError(Error, 'message');
+endsnippet
+
 snippet el
 if (${1:true}) {
 	${2}
@@ -107,7 +115,7 @@ export {
 };
 endsnippet
 
-snippet es
+snippet esp
 expect(${1:spyFunction}).toHaveBeenCalledWith(${2:arguments});
 endsnippet
 
@@ -165,7 +173,7 @@ snippet okf
 '${1:functionName}' : function $1() {},
 endsnippet
 
-snippet oks
+snippet oksp
 '${1:spyObject}' : jasmine.createSpyObj('$1', ['${2:spyFnName}']),
 endsnippet
 
@@ -250,7 +258,7 @@ ${1:functionName} = function $1() {
 },
 endsnippet
 
-snippet vs
+snippet vsp
 ${1:spyObject} = jasmine.createSpyObj('$1', ['${2:spyFnName}']),
 endsnippet
 
