@@ -258,8 +258,12 @@ ${1:functionName} = function $1() {
 },
 endsnippet
 
-snippet vsp
-${1:spyObject} = jasmine.createSpyObj('$1', ['${2:spyFnName}']),
+snippet vspf
+${1:fnName}Spy = jasmine.createSpy('$1', ${2:spyFnVar}),
+endsnippet
+
+snippet vspo
+${1:spyObject} = jasmine.createSpyObj('$1', ['${2:spyFnKey}']),
 endsnippet
 
 snippet bp
