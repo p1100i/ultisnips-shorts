@@ -146,8 +146,8 @@ import ${1:speci} from '$1';
 endsnippet
 
 snippet imp
-await imp.prep('path/${1:name}', {
-	'path/${2:mock}' : $2
+await imp.prep('path/${1:name}.mjs', {
+	'path/${2:mock}.mjs' : $2
 }, async function ($1) {
 	t.$1 = (await import($1)).default;
 });
