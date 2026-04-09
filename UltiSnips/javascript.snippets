@@ -116,7 +116,7 @@ export {
 endsnippet
 
 snippet esp
-expect(${1:spyFunction}).toHaveBeenCalledWith(${2:arguments});
+expect(${1:spy}).toHaveBeenCalledWith(${2:arguments});
 endsnippet
 
 snippet fa
@@ -181,16 +181,12 @@ snippet okf
 '${1:functionName}' : function $1() {},
 endsnippet
 
-snippet oksp
-'${1:spyObject}' : jasmine.createSpyObj('$1', ['${2:spyFnName}']),
-endsnippet
-
 snippet okv
 '${1:key}' : $1,
 endsnippet
 
 snippet sp
-spyOn(${1:object}, '${2:method}').and.callThrough();
+spy = jasmine.createSpy('${1:fnName}', $1).and.callThrough();
 endsnippet
 
 snippet re
@@ -268,10 +264,6 @@ endsnippet
 
 snippet vspf
 ${1:fnName}Spy = jasmine.createSpy('$1', $1),
-endsnippet
-
-snippet vspo
-${1:spyObject} = jasmine.createSpyObj('$1', ['${2:spyFnKey}']),
 endsnippet
 
 snippet bp
