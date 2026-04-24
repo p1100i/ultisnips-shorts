@@ -190,7 +190,11 @@ snippet okv
 endsnippet
 
 snippet sp
-spy = jasmine.createSpy('${1:fnName}', $1).and.callThrough();
+${1:fnName} = function $1() {
+	return true;
+};
+
+$1Spy = jasmine.createSpy('$1Spy', $1).and.callThrough();
 endsnippet
 
 snippet re
@@ -264,10 +268,6 @@ snippet vf
 ${1:functionName} = function $1() {
 	return;
 },
-endsnippet
-
-snippet vspf
-${1:fnName}Spy = jasmine.createSpy('$1', $1),
 endsnippet
 
 snippet bp
